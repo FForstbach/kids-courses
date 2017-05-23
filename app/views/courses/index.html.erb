@@ -1,8 +1,23 @@
 <h1>All courses</h1>
 
-<% @courses.each do |course| %>
-<ul>
-  <li>course.title</li>
 
-</ul>
-<% end %>
+<div class="container">
+  <div class="row">
+    <% @courses.each do |course| %>
+    <div class="col-xs-12 col-sm-4">
+      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('background.jpg');">
+        <div class="card-category"><%= course.category %></div>
+        <div class="card-description">
+          <h2><%= course.title %></h2>
+          <p><%= course.subtitle %></p>
+        </div>
+        <img class="card-user avatar" src="https://www.fillmurray.com/80/80">
+        <a class="card-link" href="#" ></a>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
+
+
+
