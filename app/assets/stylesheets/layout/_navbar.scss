@@ -2,12 +2,13 @@
 .navbar-wagon {
   box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
   background: white;
+  color: $blue;
   transition: all 0.3s ease;
   display: flex;
   height: 70px;
   padding: 0px 30px;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-between
 }
 
 /* Optional class to fix the navbar on top */
@@ -54,7 +55,7 @@
   padding: 0 20px;
   border-radius: 20em;
   line-height: 40px;
-  background-color: #D23333;
+  background-color: #F9C231;
   color: white;
   font-size: 14px;
   border: 2px solid #D23333;
