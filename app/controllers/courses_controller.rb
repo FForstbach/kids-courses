@@ -7,4 +7,8 @@ class CoursesController < ApplicationController
   def create
   end
 
+  def home
+    @courses = Course.all
+  end
+
 end
