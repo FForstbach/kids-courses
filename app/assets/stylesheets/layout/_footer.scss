@@ -1,1 +1,21 @@
 // Your footer style
+
+.wrapper {
+  min-height: calc(100vh-80px);
+}
+
+.footer {
+  background-color: grey;
+  margin-top: 40px;
+  ul {
+    padding: 40px 0 40px 40px;
+    li {
+      float: left;list-style: none;
+      padding: 10px;
+      font-size: 14px;
+      color: white;
+    }
+  }
+}
+
+
