@@ -4,5 +4,7 @@ class CoursesController < ApplicationController
     @courses = Course.all
   end
 
+  def create
+  end
 
 end
