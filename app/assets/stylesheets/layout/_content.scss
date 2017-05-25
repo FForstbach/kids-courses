@@ -1,0 +1,15 @@
+.content {
+  display: flex;
+}
+
+.main-content {
+  flex-basis: 80%;
+  vertical-align: bottom;
+  border: 0.5px solid red;
+  padding-right: 40px;
+}
+
+.sidebar {
+  border: 0.5px solid green;
+  padding: 0 20px;
+}

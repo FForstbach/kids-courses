@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="content">
+    <div class="row main-content">
+      <h1><%= @course.title %></h1>
+      <h2><%= @course.subtitle %></h2>
+      <p><%= @course.description %></p>
+    </div>
+    <div class="row sidebar">
+      <p><%= @course.capacity %></p>
+      <p><%= @course.start.strftime("%A, %m.%d.%Y") %></p>
+      <p><%= @course.end.strftime("%A, %m.%d.%Y") %></p>
+      <%= link_to %>
+    </div>
+  </div>
+</div>
