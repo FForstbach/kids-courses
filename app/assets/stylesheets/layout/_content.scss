@@ -2,14 +2,38 @@
   display: flex;
 }
 
+.row.nav {
+  display: inline;
+}
+
+.row.nav p {
+  display: inline-block;
+  float: left;
+}
+
 .main-content {
-  flex-basis: 80%;
+  flex-basis: 70%;
   vertical-align: bottom;
-  border: 0.5px solid red;
   padding-right: 40px;
+  float: left;
+  margin: 0;
 }
 
 .sidebar {
-  border: 0.5px solid green;
-  padding: 0 20px;
+  padding: 10px 20px;
+  margin: 0;
+  background-color: white;
+  border-radius: 5px;
+    h5 {
+      margin-bottom: 0.3em;
+    }
+
+    .btn {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    hr {
+      color: blue;
+    }
 }

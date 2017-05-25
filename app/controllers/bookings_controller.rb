@@ -10,7 +10,6 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @booking.course_id = params[:course_id]
     @booking.save
-    raise
   end
 
   def create

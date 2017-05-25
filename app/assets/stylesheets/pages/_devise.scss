@@ -1,0 +1,11 @@
+.control-label, .help-block {
+  color: $blue;
+}
+
+input#user_email, input#user_password  {
+  color: grey;
+}
+
+.boolean.optional {
+  color: $blue;
+}
