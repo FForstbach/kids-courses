@@ -20,6 +20,8 @@ gem 'autoprefixer-rails'
 gem 'devise'
 gem 'faker'
 gem 'algoliasearch-rails'
+gem 'cloudinary'
+gem 'carrierwave', '~> 0.11.2'
 
 group :development, :test do
   gem 'binding_of_caller'
