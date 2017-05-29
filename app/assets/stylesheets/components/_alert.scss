@@ -3,13 +3,20 @@
 * ------------------------------------- */
 
 .alert {
-  margin: 0;
   text-align: center;
   color: white;
+  margin-top: 70px;
 }
 .alert-info {
   background: $green;
 }
 .alert-warning {
   background: $red;
+}
+
+.notice {
+  background: $green;
+  color: white;
+  text-align: center;
+  margin-top: 70px;
 }
