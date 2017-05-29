@@ -19,6 +19,7 @@ gem 'autoprefixer-rails'
 # my gems
 gem 'devise'
 gem 'faker'
+gem 'algoliasearch-rails'
 
 group :development, :test do
   gem 'binding_of_caller'
