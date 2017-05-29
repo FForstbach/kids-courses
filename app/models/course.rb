@@ -1,5 +1,6 @@
 class Course < ApplicationRecord
   has_many :teachers
+  belongs_to :school
 
   include AlgoliaSearch
 

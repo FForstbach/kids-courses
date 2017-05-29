@@ -6,9 +6,36 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Course.destroy_all
+school_seed = Rails.root.join('db', 'seeds', 'schools.yml')
+schools = YAML::load_file(school_seed)
+puts "We have #{schools.count} schools in schools.yml"
+puts schools.size
 
-course_1 = Course.create(title: "Eltern-Workshop", subtitle: "Kinder und Computerspiele. Praktische Tipps für den Familienalltag", capacity: 20, price: 40.00, description: "Digitale Spiele erfreuen sich bei Kindern großer Beliebtheit und nehmen in ihrer Erfahrungswelt einen wachsenden Stellenwert ein. Dies stellt Eltern vor viele Fragen: Wie oft und wie lange sollten Kinder Computer spielen? Welche Computerspiele eignen sich für welches Alter? Und was tun, wenn das Thema zu Konflikten innerhalb der Familie führt? Dieser Workshop soll Eltern bei der Beantwortung dieser und weiterer Fragen eine wichtige Hilfestellung anbieten. Sie erhalten wertvolle Infos und Tipps für den Umgang mit Computerspielen im familiären Alltag sowie die Möglichkeit, eigene Erfahrungen einzubringen und zu diskutieren. Abgerundet wird der Workshop durch die praktische Einführung in ein Online-Jugendschutzsystem für Smartphones und Tablets.", start: DateTime.new(2011,6,14,19), end: DateTime.new(2011,6,14,21), category: "digital")
-course_2 = Course.create(title: "Creative Coding I", subtitle: "Der erste Schritt in die digitale Welt", capacity: 12, rice: 35.00, description: "In diesem Anfängerkurs lernen Kinder das digitale ABC und ihre erste Programmiersprache. Sie erfinden fantastische interaktive Geschichten und entwerfen eigene kleine Spiele. In den gemeinsam realisierten digitalen Projekten stellen wir die Verbindung zu sinnlichen Erfahrungen her und beziehen Bewegung, Obst und Musik mit ein. Im Zentrum des Kurses steht das Erlebnis und das selbsttätige Entdecken wichtiger Konzepte digitaler Technologie.", start: DateTime.new(2011,8,6,14), end: DateTime.new(2011,8,6,16), category: "digital")
-course_3 = Course.create(title: "App Development", subtitle: "Eigene Apps erfinden und entwickeln", capacity: 8, price: 20.00, description: "In diesem Kurs können Kinder ihre eigene Android-App entwickeln. Sie lernen den MIT App Inventor kennen und erkunden alle Schritte eines App-Entwicklungsprozesses – von Ideenfindung über Design bis hin zu Programmierung und Testphase. Im Zentrum des Kurses steht die Realisierung eigener kreativer Projekte und der Erwerb eines Grundverständnisses für die Prozesse der Programmierung.", start: DateTime.new(2011,10,7,14), end: DateTime.new(2011,10,7,16), category: "digital")
-course_4 = Course.create(title: "Robotik-Workshop", subtitle: "Roboter bauen und programmieren", capacity: 10, price: 30.00, description: "Du träumst davon, einen eigenen Roboter zu bauen und selbst zu programmieren? Du möchtest verstehen, wie ein Roboter eigentlich funktioniert? Dann bist Du genau richtig in unserem Cagebot-Robotik-Workshop! Dieser Workshop eröffnet Kindern zwischen 10 und 14 Jahren einen spielerischen Zugang zu Programmierung und Robotertechnik. Die Kinder bauen in kleinen Teams eigene Roboter – dazu nutzen sie Cagebot, einen modularen Roboter-Bausatz mit verschraubbaren Bausteinen und leistungsfähiger Elektronik. Nach einer Einführung in eine visuelle Programmiersprache können sie diese Roboter dann programmieren und gemeinsam aufregende Challenges meistern.Im Zentrum des Workshops steht das gemeinschaftliche Erlebnis und selbsttätige Entdecken digitaler und elektrotechnischer Grundprinzipen. Vorkenntnisse sind nicht erforderlich!", start: DateTime.new(2011,10,7,14), end: DateTime.new(2011,10,7,16), category: "digital")
+puts "Creating #{schools.count} schools..."
+schools.each_with_index do |school, index|
+  s = School.find_or_initialize_by(id: index + 1)
+  s.name = school["name"]
+  s.about = school["about"]
+  s.location = school["location"]
+  s.save!
+  print "."
+end
+
+seed_file = Rails.root.join('db', 'seeds', 'courses.yml')
+courses = YAML::load_file(seed_file)
+puts "We have #{courses.count} courses in courses.yml"
+puts courses.size
+
+puts "Creating #{courses.count} courses..."
+courses.each_with_index do |course, index|
+  c = Course.find_or_initialize_by(id: index + 1)
+  c.title = course["title"]
+  c.subtitle = course["subtitle"]
+  c.description = course["description"]
+  c.capacity = rand(12..20)
+  c.price = course["price"]
+  c.school = School.find_by(name: course['school'])
+  c.save!
+  print "."
+end
+
