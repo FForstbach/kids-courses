@@ -16,3 +16,21 @@
     <% end %>
   </div>
 </div>
+
+<% content_for(:after_js) do %>
+  <script src="//cdn.jsdelivr.net/instantsearch.js/1/instantsearch.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+
+      var client = algoliasearch(ENV["ALGOLIASEARCH_APPLICATION_ID"], ENV["ALGOLIASEARCH_API_KEY_SEARCH"]);
+      var index = client.initIndex('Course');
+
+      var search = instantsearch({
+      appId: '<%= ENV['ALGOLIASEARCH_APPLICATION_ID'] %>',
+      apiKey: '<%= ENV['ALGOLIASEARCH_API_KEY_SEARCH'] %>',
+      indexName: '<%= Course.index_name %>',
+      urlSync: true
+    });
+    });
+  </script>
+<% end %>
