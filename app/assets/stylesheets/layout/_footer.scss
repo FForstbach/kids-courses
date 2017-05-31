@@ -7,18 +7,23 @@
 .footer {
   background-color: grey;
   margin-top: 40px;
-  ul {
-    padding: 40px 0 40px 40px;
-    li {
-      float: left;list-style: none;
-      padding: 10px;
+  padding: 10px;
+  li {
+      float: left;
+      list-style: none;
+      padding: 0 10px;
       font-size: 14px;
       color: white;
-    }
   }
 
   a {
     color: white;
+  }
+
+  p {
+    color: white;
+    font-size: 18px;
+    display: block;
   }
 }
 
