@@ -35,6 +35,8 @@ courses.each_with_index do |course, index|
   c.capacity = rand(12..20)
   c.school = School.find_by(name: course['school'])
   c.photo = course["photo"]
+  c.start = course["start"]
+  c.end = course["end"]
   c.save!
   print "."
 end

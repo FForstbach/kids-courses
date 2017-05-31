@@ -1,17 +1,26 @@
 <div class="container">
   <h1>All courses</h1>
+
   <div class="row">
     <% @courses.each do |course| %>
-      <div class="col-xs-12 col-sm-6">
-        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url( '<%= asset_path course.photo %>' );">
-          <div class="card-category"><%= course.category %></div>
-          <div class="card-description">
-            <h2><%= course.title %></h2>
-            <p><%= course.subtitle %></p>
-            <p><%= course.school.name %></p>
+      <div class="col-xs-12 col-sm-4">
+        <div class="newcard">
+        <%= link_to course_path(course) do %>
+          <div class="photo">
+            <%= image_tag course.photo %>
           </div>
-          <img class="card-user avatar" src="https://www.fillmurray.com/80/80">
-          <a class="card-link" href="<%= course_path(course) %>" ></a>
+          <div class="content">
+            <div class="title">
+              <h2><%= course.title %></h2>
+            </div>
+            <div class="subtitle">
+              <h4><%= course.subtitle %></h4>
+            </div>
+            <div class="school">
+              <p><%= course.school.name %></p>
+            </div>
+          </div>
+          <% end %>
         </div>
       </div>
     <% end %>
