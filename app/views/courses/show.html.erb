@@ -15,7 +15,7 @@
       <h5>Start</h5>
       <p><%= @course.start.strftime("%A, %m.%d.%Y") %></p>
       <h5>End</h5>
-      <p><%= @course.end.strftime("%A, %m.%d.%Y") %></p>
+      <p><%= @course.end.strftime("%A, %m.%d.%Y") %></p>p
       <%= link_to "Reserve a spot", new_booking_path(:course_id => @course.id), class: "btn btn-primary" %>
     </div>
   </div>
