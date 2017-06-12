@@ -33,6 +33,7 @@ courses.each_with_index do |course, index|
   c.subtitle = course["subtitle"]
   c.description = course["description"]
   c.capacity = rand(12..20)
+  c.category = course["category"]
   c.school = School.find_by(name: course['school'])
   c.photo = course["photo"]
   c.start = course["start"]
@@ -40,4 +41,6 @@ courses.each_with_index do |course, index|
   c.save!
   print "."
 end
+
+Course.reindex
 

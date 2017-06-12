@@ -8,6 +8,7 @@
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
     <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= stylesheet_link_tag "https://cdn.jsdelivr.net/instantsearch.js/1/instantsearch.min.css" %>
   </head>
   <body>
     <div class="wrapper">
@@ -18,5 +19,6 @@
     </div>
     <%= render 'shared/footer' %>
     <%= javascript_include_tag 'application' %>
+    <%= yield(:after_js) %>
   </body>
 </html>

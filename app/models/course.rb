@@ -4,10 +4,12 @@ class Course < ApplicationRecord
 
   include AlgoliaSearch
 
-  algoliasearch do
-    attribute :title, :subtitle, :description
+  algoliasearch per_environment: true do
+    attribute :title, :subtitle, :description, :category, :school, :url, :photo
     searchableAttributes ['title', 'subtitle', 'unordered(description)']
   end
-
+  def url
+    course_path(id: self.id)
+  end
 
 end
