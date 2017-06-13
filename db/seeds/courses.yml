@@ -4,7 +4,7 @@
   category: Digital
   school: "HABA Digitalwerkstatt"
   price: 30
-  photo: "eltern_workshop.jpg"
+  photo: "assets/eltern_workshop.jpg"
   start: "201707051430"
   end: "201707051630"
 - title: "Creative Coding I"
@@ -13,7 +13,7 @@
   category: Digital
   school: "HABA Digitalwerkstatt"
   price: 20
-  photo: "creative_coding_I.jpg"
+  photo: "assets/creative_coding_I.jpg"
   start: "201707051430"
   end: "201707051630"
 - title: "Robotik-Workshop"
@@ -22,7 +22,7 @@
   category: Digital
   school: "HABA Digitalwerkstatt"
   price: 40
-  photo: "robotik.jpg"
+  photo: "assets/robotik.jpg"
   start: "201707051430"
   end: "201707051630"
 - title: "Eigene Apps erfinden und entwickeln"
@@ -31,6 +31,6 @@
   category: Digital
   school: "HABA Digitalwerkstatt"
   price: 40
-  photo: "app_development.jpg"
+  photo: "assets/app_development.jpg"
   start: "201707051430"
   end: "201707051630"
