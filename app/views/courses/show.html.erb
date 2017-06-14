@@ -12,10 +12,23 @@
       <h4>Save your spot now!</h4>
       <h5>Capacity</h5>
       <p><%= @course.capacity %></p>
-      <h5>Start</h5>
-      <p><%= @course.start.strftime("%A, %m.%d.%Y") %></p>
-      <h5>End</h5>
-      <p><%= @course.end.strftime("%A, %m.%d.%Y") %></p>p
+      <% if @course.start.time.to_formatted_s(:number)[0,8] == @course.end.time.to_formatted_s(:number)[0,8] %>
+        <h5>Date</h5>
+        <p><%= @course.start.strftime("%A, %m.%d.%Y") %></p>
+        <h5>Start Time</h5>
+        <p> <%= @course.start.time.to_formatted_s(:time) %></p>
+        <h5>End Time</h5>
+        <p><%= @course.end.time.to_formatted_s(:time) %></p>
+      <% else %>
+        <h5>Start Date</h5>
+        <p><%= @course.start.strftime("%A, %m.%d.%Y") %></p>
+        <h5>End Date</h5>
+        <p><%= @course.end.strftime("%A, %m.%d.%Y") %></p>
+        <h5>Start Time</h5>
+        <p> <%= @course.start.time.to_formatted_s(:time) %></p>
+        <h5>End Time</h5>
+        <p><%= @course.end.time.to_formatted_s(:time) %></p>
+      <% end %>
       <%= link_to "Reserve a spot", new_booking_path(:course_id => @course.id), class: "btn btn-primary" %>
     </div>
   </div>
