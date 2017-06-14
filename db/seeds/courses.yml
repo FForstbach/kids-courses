@@ -1,5 +1,5 @@
-- title: "Eltern-Workshop"
-  subtitle: "Kinder und Computerspiele. Praktische Tipps für den Familienalltag"
+- subtitle: "Eltern-Workshop"
+  title: "Kinder und Computerspiele. Praktische Tipps für den Familienalltag"
   description: "Digitale Spiele erfreuen sich bei Kindern großer Beliebtheit und nehmen in ihrer Erfahrungswelt einen wachsenden Stellenwert ein. Dies stellt Eltern vor viele Fragen: Wie oft und wie lange sollten Kinder Computer spielen? Welche Computerspiele eignen sich für welches Alter? Und was tun, wenn das Thema zu Konflikten innerhalb der Familie führt? Dieser Workshop soll Eltern bei der Beantwortung dieser und weiterer Fragen eine wichtige Hilfestellung anbieten. Sie erhalten wertvolle Infos und Tipps für den Umgang mit Computerspielen im familiären Alltag sowie die Möglichkeit, eigene Erfahrungen einzubringen und zu diskutieren. Abgerundet wird der Workshop durch die praktische Einführung in ein Online-Jugendschutzsystem für Smartphones und Tablets."
   category: Digital
   school: "HABA Digitalwerkstatt"
@@ -7,8 +7,8 @@
   photo: "assets/eltern_workshop.jpg"
   start: "201707051430"
   end: "201707051630"
-- title: "Creative Coding I"
-  subtitle: "Programmieren lernen mit Leichtigkeit"
+- subtitle: "Creative Coding I"
+  title: "Programmieren lernen mit Leichtigkeit"
   description: "In diesem Anfängerkurs lernen Kinder das digitale ABC und ihre erste Programmiersprache. Sie erfinden fantastische interaktive Geschichten und programmieren erste eigene Spiele und Animationen. Spielerisch lernen sie so Variablen, Funktionen und andere wichtige Grundlagen des Programmierens kennen und nutzen. Im Zentrum des Kurses steht das Erlebnis und das selbsttätige Entdecken wichtiger Konzepte digitaler Technologie."
   category: Digital
   school: "HABA Digitalwerkstatt"
@@ -16,8 +16,8 @@
   photo: "assets/creative_coding_I.jpg"
   start: "201707051430"
   end: "201707051630"
-- title: "Robotik-Workshop"
-  subtitle: "Roboter bauen und programmieren"
+- subtitle: "Robotik-Workshop"
+  title: "Roboter bauen und programmieren"
   description: "Du träumst davon, einen eigenen Roboter zu bauen und selbst zu programmieren? Du möchtest verstehen, wie ein Roboter eigentlich funktioniert? Dann bist Du genau richtig in unserem Cagebot-Robotik-Workshop! Dieser Workshop eröffnet Kindern zwischen 10 und 14 Jahren einen spielerischen Zugang zu Programmierung und Robotertechnik. Die Kinder bauen in kleinen Teams eigene Roboter – dazu nutzen sie Cagebot, einen modularen Roboter-Bausatz mit verschraubbaren Bausteinen und leistungsfähiger Elektronik. Nach einer Einführung in eine visuelle Programmiersprache können sie diese Roboter dann programmieren und gemeinsam aufregende Challenges meistern. Im Zentrum des Workshops steht das gemeinschaftliche Erlebnis und selbsttätige Entdecken digitaler und elektrotechnischer Grundprinzipen. Vorkenntnisse sind nicht erforderlich!"
   category: Digital
   school: "HABA Digitalwerkstatt"
@@ -25,8 +25,8 @@
   photo: "assets/robotik.jpg"
   start: "201707051430"
   end: "201707051630"
-- title: "Eigene Apps erfinden und entwickeln"
-  subtitle: "App Development"
+- subtitle: "App Development"
+  title: "Eigene Apps erfinden und entwickeln"
   description: "Digitale Spiele erfreuen sich bei Kindern großer Beliebtheit und nehmen in ihrer Erfahrungswelt einen wachsenden Stellenwert ein. Dies stellt Eltern vor viele Fragen: Wie oft und wie lange sollten Kinder Computer spielen? Welche Computerspiele eignen sich für welches Alter? Und was tun, wenn das Thema zu Konflikten innerhalb der Familie führt? Dieser Workshop soll Eltern bei der Beantwortung dieser und weiterer Fragen eine wichtige Hilfestellung anbieten. Sie erhalten wertvolle Infos und Tipps für den Umgang mit Computerspielen im familiären Alltag sowie die Möglichkeit, eigene Erfahrungen einzubringen und zu diskutieren. Abgerundet wird der Workshop durch die praktische Einführung in ein Online-Jugendschutzsystem für Smartphones und Tablets."
   category: Digital
   school: "HABA Digitalwerkstatt"
@@ -34,8 +34,8 @@
   photo: "assets/app_development.jpg"
   start: "201707051430"
   end: "201707051630"
-- title: "Creative Coding III"
-  subtitle: "Eigene Ideen digital realisieren"
+- subtitle: "Creative Coding III"
+  title: "Eigene Ideen digital realisieren"
   description: "Schritt … Schritt … und einmal rum. Wer hier ein Tänzchen vermutet, der hat ganz recht. In diesem Programmierkurs für Kinder mit guten Vorkenntnissen entdecken wir leichtfüßig Takt und Schönheit der Programmierung. Die Kinder lernen in interaktiven Schritten eigene Spiele und Animationen mit Scratch zu programmieren, flinke Roboter zum Laufen und Hüpfen zu bringen und vieles Spannende mehr. Für Kinder ab 8 Jahren mit guten Vorkenntnissen"
   category: Digital
   school: "HABA Digitalwerkstatt"
@@ -43,8 +43,8 @@
   photo: "assets/creative_coding_III.jpg"
   start: "20170209"
   end: "20170713"
-- title: "GarageBand-Workshop"
-  subtitle: "Creating a Digital Sound Story"
+- subtitle: "GarageBand-Workshop"
+  title: "Creating a Digital Sound Story"
   description: "Wie klingt eigentlich ein Frühlingsmorgen? Und wie eine wilde Verfolgungsjagd? Wie lassen sich Geräusche gezielt erzeugen? Und wie kann man den Computer nutzen, um kreativ mit Tönen und Klängen zu arbeiten? Dieser Workshop eröffnet Kindern zwischen 10 und 14 Jahren einen bewussten und kreativen Zugang zu digitaler Technologie und zur Welt der Akustik. Sie entwickeln eine eigene Geschichte und lernen, diese mit verschiedenen Sounds selbsttätig zu inszenieren. Sie arbeiten mit moderner Audiosoftware, die ihnen eine Vielzahl an kreativen Möglichkeiten bietet. Im Anschluss an den Workshop können die Kinder ihre selbst produzierten Sound Storys Eltern und/oder Freunden in der Digitalwerkstatt vorführen. Die Projekte können darüber hinaus auf einem USB-Stick mit nach Hause genommen werden. Workshop für Kinder von 10 bis 14 Jahren – Vorkenntnisse sind nicht erforderlich!"
   category: Digital
   school: "HABA Digitalwerkstatt"

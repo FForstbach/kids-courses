@@ -52,6 +52,9 @@
   margin-bottom: 20px;
   height: 40%;
   min-height: 19em;
+  title, a {
+    text-decoration: none;
+  }
   img {
     height: auto;
     max-width: 100%;

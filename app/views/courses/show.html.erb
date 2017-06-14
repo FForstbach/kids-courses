@@ -4,8 +4,8 @@
   </div>
   <div class="content" data-sticky-sidebar-container>
     <div class="row main-content">
+      <h6><%= @course.subtitle %></h6>
       <h1><%= @course.title %></h1>
-      <h2><%= @course.subtitle %></h2>
       <p><%= @course.description %></p>
       <hr>
       <h6>The school</h6>
@@ -35,7 +35,7 @@
           <h5>End Time</h5>
           <p><%= @course.end.time.to_formatted_s(:time) %></p>
         <% end %>
-        <%= link_to "Reserve a spot", new_booking_path(:course_id => @course.id), class: "btn btn-primary" %>
+        <%= link_to "Reserve a spot", new_booking_path(:course_id => @course.id), class: "btn btn-primary text-center" %>
       </div>
     </div>
   </div>
