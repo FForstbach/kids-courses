@@ -34,3 +34,21 @@
   photo: "assets/app_development.jpg"
   start: "201707051430"
   end: "201707051630"
+- title: "Creative Coding III"
+  subtitle: "Eigene Ideen digital realisieren"
+  description: "Schritt … Schritt … und einmal rum. Wer hier ein Tänzchen vermutet, der hat ganz recht. In diesem Programmierkurs für Kinder mit guten Vorkenntnissen entdecken wir leichtfüßig Takt und Schönheit der Programmierung. Die Kinder lernen in interaktiven Schritten eigene Spiele und Animationen mit Scratch zu programmieren, flinke Roboter zum Laufen und Hüpfen zu bringen und vieles Spannende mehr. Für Kinder ab 8 Jahren mit guten Vorkenntnissen"
+  category: Digital
+  school: "HABA Digitalwerkstatt"
+  price: 20
+  photo: "assets/creative_coding_III.jpg"
+  start: "20170209"
+  end: "20170713"
+- title: "GarageBand-Workshop"
+  subtitle: "Creating a Digital Sound Story"
+  description: "Wie klingt eigentlich ein Frühlingsmorgen? Und wie eine wilde Verfolgungsjagd? Wie lassen sich Geräusche gezielt erzeugen? Und wie kann man den Computer nutzen, um kreativ mit Tönen und Klängen zu arbeiten? Dieser Workshop eröffnet Kindern zwischen 10 und 14 Jahren einen bewussten und kreativen Zugang zu digitaler Technologie und zur Welt der Akustik. Sie entwickeln eine eigene Geschichte und lernen, diese mit verschiedenen Sounds selbsttätig zu inszenieren. Sie arbeiten mit moderner Audiosoftware, die ihnen eine Vielzahl an kreativen Möglichkeiten bietet. Im Anschluss an den Workshop können die Kinder ihre selbst produzierten Sound Storys Eltern und/oder Freunden in der Digitalwerkstatt vorführen. Die Projekte können darüber hinaus auf einem USB-Stick mit nach Hause genommen werden. Workshop für Kinder von 10 bis 14 Jahren – Vorkenntnisse sind nicht erforderlich!"
+  category: Digital
+  school: "HABA Digitalwerkstatt"
+  price: 30
+  photo: "assets/digital_sound_story.jpg"
+  start: "soon"
+  end: ""

@@ -14,48 +14,48 @@
   <div id="pagination-container"></div>
 
 <% content_for(:after_js) do %>
-<script src="//cdn.jsdelivr.net/instantsearch.js/1/instantsearch.min.js"></script>
-<script type="text/javascript">
-  $(document).ready(function()
-  {
+  <script src="//cdn.jsdelivr.net/instantsearch.js/1/instantsearch.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function()
+    {
 
-  var hitTemplate = '<div class="col-xs-12 col-md-6 col-lg-4"><a href="{{{url}}}"><div class="newcard"><div class="photo"><img src="assets/eltern_workshop.jpg"></div>'+
-    '<div class="title"><h2>{{{_highlightResult.title.value}}}</h2></div>'+
-    '<div class="subtitle"><h4>{{{_highlightResult.subtitle.value}}}</h4></div>'+
-    '<p>{{{_highlightResult.school.name.value}}}</p>'+
-    '</div></a></div>';
+    var hitTemplate = '<div class="col-xs-12 col-md-6 col-lg-4"><a href="{{{url}}}"><div class="newcard"><div class="photo"><img src="assets/eltern_workshop.jpg"></div>'+
+      '<div class="title"><h2>{{{_highlightResult.title.value}}}</h2></div>'+
+      '<div class="subtitle"><h4>{{{_highlightResult.subtitle.value}}}</h4></div>'+
+      '<p>{{{_highlightResult.school.name.value}}}</p>'+
+      '</div></a></div>';
 
-  var search = instantsearch({
-    appId: '<%= ENV["ALGOLIASEARCH_APPLICATION_ID"] %>',
-    apiKey: '<%= ENV["ALGOLIASEARCH_API_KEY_SEARCH"] %>',
-    indexName: 'Course',
-    urlSync: true
-  });
+    var search = instantsearch({
+      appId: '<%= ENV["ALGOLIASEARCH_APPLICATION_ID"] %>',
+      apiKey: '<%= ENV["ALGOLIASEARCH_API_KEY_SEARCH"] %>',
+      indexName: 'Course',
+      urlSync: true
+    });
 
-  search.addWidget(
-    instantsearch.widgets.searchBox({
-      container: '#search-box',
-      placeholder: 'Search for products...'
-    })
-  );
+    search.addWidget(
+      instantsearch.widgets.searchBox({
+        container: '#search-box',
+        placeholder: 'Search for products...'
+      })
+    );
 
-  search.addWidget(
-    instantsearch.widgets.hits({
-      container: '#hits-container',
-      templates: {
-        empty: '<div class="text-center">No results found matching <strong>"{{query}}"</strong></div>',
-        item: hitTemplate
-      }
-    })
-  );
+    search.addWidget(
+      instantsearch.widgets.hits({
+        container: '#hits-container',
+        templates: {
+          empty: '<div class="text-center">No results found matching <strong>"{{query}}"</strong></div>',
+          item: hitTemplate
+        }
+      })
+    );
 
-  search.addWidget(
-    instantsearch.widgets.pagination({
-      container: '#pagination-container'
-    })
-  );
+    search.addWidget(
+      instantsearch.widgets.pagination({
+        container: '#pagination-container'
+      })
+    );
 
-  search.start();
-  });
-</script>
+    search.start();
+    });
+  </script>
 <% end %>
