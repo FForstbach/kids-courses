@@ -2,7 +2,7 @@
   <div class="row nav">
     <p><%= link_to "< Go back to courses overview", courses_path %></p>
   </div>
-  <div class="content">
+  <div class="content" data-sticky-sidebar-container>
     <div class="row main-content">
       <h1><%= @course.title %></h1>
       <h2><%= @course.subtitle %></h2>
@@ -14,27 +14,43 @@
       <i class="fa fa-map-marker fa-1x" aria-hidden="true"></i> <p id="address"><%= @course.school.location %> </p>
     </div>
     <div class="row sidebar">
-      <h4>Save your spot now!</h4>
-      <h5>Capacity</h5>
-      <p><%= @course.capacity %></p>
-      <% if @course.start.time.to_formatted_s(:number)[0,8] == @course.end.time.to_formatted_s(:number)[0,8] %>
-        <h5>Date</h5>
-        <p><%= @course.start.strftime("%A, %m.%d.%Y") %></p>
-        <h5>Start Time</h5>
-        <p> <%= @course.start.time.to_formatted_s(:time) %></p>
-        <h5>End Time</h5>
-        <p><%= @course.end.time.to_formatted_s(:time) %></p>
-      <% else %>
-        <h5>Start Date</h5>
-        <p><%= @course.start.strftime("%A, %m.%d.%Y") %></p>
-        <h5>End Date</h5>
-        <p><%= @course.end.strftime("%A, %m.%d.%Y") %></p>
-        <h5>Start Time</h5>
-        <p> <%= @course.start.time.to_formatted_s(:time) %></p>
-        <h5>End Time</h5>
-        <p><%= @course.end.time.to_formatted_s(:time) %></p>
-      <% end %>
-      <%= link_to "Reserve a spot", new_booking_path(:course_id => @course.id), class: "btn btn-primary" %>
+      <div class="sidebar__inner" data-sticky-sidebar data-top-spacing="100">
+        <h4>Save your spot now!</h4>
+        <h5>Capacity</h5>
+        <p><%= @course.capacity %></p>
+        <% if @course.start.time.to_formatted_s(:number)[0,8] == @course.end.time.to_formatted_s(:number)[0,8] %>
+          <h5>Date</h5>
+          <p><%= @course.start.strftime("%A, %m.%d.%Y") %></p>
+          <h5>Start Time</h5>
+          <p> <%= @course.start.time.to_formatted_s(:time) %></p>
+          <h5>End Time</h5>
+          <p><%= @course.end.time.to_formatted_s(:time) %></p>
+        <% else %>
+          <h5>Start Date</h5>
+          <p><%= @course.start.strftime("%A, %m.%d.%Y") %></p>
+          <h5>End Date</h5>
+          <p><%= @course.end.strftime("%A, %m.%d.%Y") %></p>
+          <h5>Start Time</h5>
+          <p> <%= @course.start.time.to_formatted_s(:time) %></p>
+          <h5>End Time</h5>
+          <p><%= @course.end.time.to_formatted_s(:time) %></p>
+        <% end %>
+        <%= link_to "Reserve a spot", new_booking_path(:course_id => @course.id), class: "btn btn-primary" %>
+      </div>
     </div>
   </div>
 </div>
+
+<% content_for(:after_js) do %>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <%= javascript_include_tag "sticky_sidebar", "data-turbolinks-track" => true  %>
+  <script type="text/javascript">
+      $(document).ready(function(){
+          $(".sidebar").stickySidebar({
+              containerSelector: '.main-content',
+              innerWrapperClass: 'sidebar__inner',
+              topSpacing: 50
+          });
+      });
+  </script>
+<% end %>
