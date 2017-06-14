@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170529083943) do
+ActiveRecord::Schema.define(version: 20170614121443) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,12 +31,16 @@ ActiveRecord::Schema.define(version: 20170529083943) do
     t.integer  "capacity"
     t.datetime "start"
     t.datetime "end"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
     t.string   "category"
     t.integer  "school_id"
     t.decimal  "price"
     t.string   "photo"
+    t.integer  "age_min"
+    t.integer  "age_max"
+    t.text     "skills_expected"
+    t.boolean  "free_trial"
     t.index ["school_id"], name: "index_courses_on_school_id", using: :btree
   end
 
